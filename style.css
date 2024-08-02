@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(fonts/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+
+:root{
+    --cor0:#C0EDCF;
+    --cor1:#2CE670;
+    --cor2:#40c16fb9;
+    --cor3:#4B9D69;
+    --cor4:#41694F;
+    --cor5:#32503c;
+
+    --font-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas Neue', 'cursive';
+    --font-android: 'Android', 'cursive';
+
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font-padrão);
+    text-align: justify;
+}
+
+main{
+    background-color: white;
+    color: black;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.322);
+    border-radius: 0px 0px 8px 8px ;
+}
+
+main h1{
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+main h2{
+    background-image: linear-gradient(90deg, var(--cor2), transparent); /*Anotar*/
+    font-weight: normal;
+}
+
+main p{
+    margin: 15px 0px;
+    text-indent: 30px;
+    line-height: 1.8em; /*Anotar*/
+}
+
+main strong{
+    color: var(--cor2);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    color: var(--cor2);
+    font-weight: bold;
+    transition-duration: 0.1s; /*Anotar*/
+
+}
+
+main a::after{
+    content: '🔗';
+    
+}
+
+main a:hover{
+    text-decoration: underline;
+    background-color: var(--cor3);
+    color: white;
+
+}
+
+main img{
+    width: 100%; /*Anotar*/
+}
+
+main img.pequena{
+    max-width: 350px; /*Anotar*/
+    display: block; /*Anotar*/
+    margin: auto;
+}
+
+/*Metodo Guanabara*/
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -15px 30px -15px;
+    padding: 20px;
+    padding-bottom: 56%;
+
+    position: relative
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+/*Fim metodo guanabara*/
+
+header{
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    min-height: 150px; /*Anotar*/
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5)); /*Anotar*/
+}
+
+header > h1{
+    font-family: var(--font-destaque);
+    font-weight: normal;
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.256); /*Anotar*/
+    
+}
+
+header > p{
+    font-size: var(--font-padrão);
+    font-size: 1.2em;
+    font-weight: lighter;
+    max-width: 600px; /*Anotar*/
+    margin: auto; /*Anotar*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.248);
+
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 1px 4px 3px rgba(0, 0, 0, 0.245);
+
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px 4px 0px 0px;
+    transition-duration: 0.6s; /*Anotar*/
+}
+
+nav > a:hover{ /*Anotar*/
+    background-color: var(--cor3);
+
+}
+
+article > h1, h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+
+}
+
+article h1{
+    color: black;
+}
+
+/* article > div{
+    height: 600px;
+    max-width: 1000px;
+    background-color: var(--cor5);
+    padding: 20px 30px;
+    margin: 12px -15px;
+    justify-content: center;
+
+
+} */
+
+aside{
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.264); /*Anotar*/
+
+}
+
+aside h3{
+    background-color: var(--cor2);
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*Anotar*/
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    font-weight: bold;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /*Anotar*/
+    list-style-position: inside; /*Anotar*/
+    columns: 2; /*Anotar*/
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px;
+}
+
+footer > p > a{
+    color: white;
+    text-decoration: none;
+}
